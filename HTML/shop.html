@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../IMG/vh-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/wow/wow.js"></script>
+    <script src="../JS/custom.js"></script>
+
+    <link rel="stylesheet" href="/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="../vendors/animate/custom-animate.css">
+    
+    <title>Sản Phẩm - Bán Sản Phẩm Thiết bị mạng</title>
+    <style>
+        #cart-notification {
+        width: 100%;
+        position: fixed;
+        top: 70px;
+        right: 0px;
+        padding: 10px 20px;
+        background-color: #ffcc33;
+        color: white;
+        z-index: 1000;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    </style>
+</head>
+
+<body>
+   <!-- header -->
+   <header class="clearfix" id="header">
+      <section class="header">
+          <div class="top-header">
+              <div class="container">
+                  <div class="row align-items-center g-1">
+                      <div class="col-md-3 col-6 mx-auto">
+                          <div class="logo">
+                              <img src="../IMG/ch-1.png" alt="Logo" />
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-12">
+                          <div class="search">
+                              <form class="form-inline justify-content-center row">
+                                  <div class="form-search col-12">
+                                      <input class="form-control w-100" type="search" placeholder="Tìm kiếm ..." aria-label="Search">
+                                      <button class="btn btn-search" type="submit">
+                                          <i class="fa fa-search" aria-hidden="true"></i>
+                                      </button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="col-md-3 text-start d-none d-md-flex justify-content-center align-items-center">
+                          <div class="main-menu__call d-flex align-items-center">
+                              <div class="main-menu__call-icon">
+                                  <i class="fas fa-phone"></i>
+                              </div>
+                              <div class="main-menu__call-content">
+                                  <a href="tel:+201146198234">+201146198234</a>
+                                  <p>Liên hệ Hotline</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-2 d-inline-flex justify-content-end">
+                          <button type="button" class="btn-cart mx-1 d-none d-md-inline-flex align-items-center rounded">
+                              <i class="fa fa-user mr-2" aria-hidden="true"></i>
+                              <a href="../HTML/signin.html" class="text-white p-1">Đăng nhập</a>
+                          </button>
+                          <a href="cart.html" class="btn position-relative d-none d-md-inline-flex align-items-center" style="background-color: #4bb6b7; color: white;">
+                              <i class="fas fa-shopping-cart"></i>
+                              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge" style="background-color: #4bb6b7;" data-count="0">0</span>
+                          </a>
+                      </div>
+                      <!-- Mobile Menu Button -->
+                      <div class="col-12 text-end d-md-none p-2 d-flex align-items-center justify-content-between fixel navbar-fixed-top" style="border: 1px solid #4bb6b7; border-radius: 5px; background: #FFFFFF24; backdrop-filter: blur(10px);">
+                          <button class="menu-toggle">
+                              <i class="fas fa-bars"></i>
+                          </button>
+                          <button type="button" class="btn-cart rounded mx-1">
+                              <i class="fa fa-user mr-2" aria-hidden="true"></i>
+                              <a href="../HTML/signin.html" class="text-white p-1">Đăng nhập</a>
+                          </button>
+                          <a href="cart.html" class="btn position-relative" style="background-color: #4bb6b7; color: white;">
+                              <i class="fas fa-shopping-cart"></i>
+                              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge" style="background-color: #4bb6b7;" data-count="0">0</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+           
+      </section>
+
+      <!-- Desktop Menu -->
+      <nav class="navbar navbar-expand-lg d-none d-md-block navbar-fixed-top">
+          <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mx-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="home.html">Trang Chủ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+                        </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link active dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Sản Phẩm
+                              <span class="ct-menu-badge">Hot</span>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/cisco-logo-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Cisco</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/juniper-networks-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Juniper</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/day-cap-quang-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Cáp Quang</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/tuong-lua-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Tường Lửa Firewall</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/bo-phat-song-wifi-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Bộ Phát Wifi Router Wifi</span>
+                            </a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="tintuc.html">Tin Tức</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                      </li>
+                     
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <nav id="mobileNav" class="nav-menu">
+          <div class="nav-header d-flex flex-row">
+              <div class="mobile-logo">
+                  <img src="../IMG/vh-1.png" alt="Logo" style="width: 200px; margin: 20px;">
+              </div>
+              <div class="menu-close">
+                  <i class="fas fa-times"></i>
+              </div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="home.html">Trang Chủ</a></li>
+            <li><a href="gioithieu.html">Giới Thiệu</a></li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Sản Phẩm
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/cisco-logo-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Cisco</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/juniper-networks-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Juniper</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/day-cap-quang-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Cáp Quang</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/tuong-lua-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Tường Lửa Firewall</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/bo-phat-song-wifi-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Bộ Phát Wifi Router Wifi</span>
+                </a></li>
+               </ul>
+           </li>
+            <li><a href="tintuc.html">Tin Tức</a></li>
+            <li><a href="lienhe.html">Liên Hệ</a></li>
+            
+        </ul>
+      </nav>
+  </header>
+  <!--end header -->
+    <div class="content">
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(../IMG/1589288337-multi_pcat930-1589196403multipcat900thietbimangkhac.jpg); background-size: cover;">
+            </div>
+            <div class="page-header-shape-1"><img src="../IMG/page-header-shape-1.png" alt=""></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="home.html">Trang Chủ</a></li>
+                        <li><span>/</span></li>
+                        <li>Sản Phẩm</li>
+                    </ul>
+                    <h2>Sản Phẩm</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+        <!--Product Start-->
+        <section class="product sanpham">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="product__sidebar">
+                            <div class="shop-search product__sidebar-single">
+                                <form action="#">
+                                    <input type="text" placeholder="Tìm Kiếm ...">
+                                </form>
+                            </div>
+                            <div class="shop-category product__sidebar-single">
+                                <h3 class="product__sidebar-title">Danh Mục</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Thiết bị mạng CISCO</a></li>
+                                    <li class="active"><a href="#">Thiết bị mạng JUNIPER</a></li>
+                                    <li><a href="#">Thiết bị mạng CÁP QUANG</a></li>
+                                    <li><a href="#">Tường lửa FIREWALL</a></li>
+                                    <li><a href="#">Bộ phát Wifi ROUTER WIFI</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="product__items">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="product__showing-result">
+                                        <div class="product__showing-text-box">
+                                            <p class="product__showing-text">Showing 1–9 of 12 results</p>
+                                        </div>
+                                        <div class="product__showing-sort">
+                                            <div class="select-box">
+                                                <select class="wide nice-select">
+                                                    <option data-display="Sort by popular">Sắp xếp theo</option>
+                                                    <option value="1">Giá: Thấp đến Cao</option>
+                                                    <option value="2">Giá: Cao đến Thấp</option>
+                                                    <option value="3">Mới nhất</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__all">
+                            <div class="row product-list">
+                                <div id="cart-notification" class="alert alert-success" style="display:none;">
+                                    Sản phẩm đã được thêm vào giỏ hàng!
+                                </div>
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="1">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/switch-cisco-c1000fe-48p-4g-l.webp" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title">
+                                                <a href="../HTML/chitietsanpham.html">Cisco C1000FE-48P-4G-L</a>
+                                            </h4>
+                                            <p class="product__all-price">27,820,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="2">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/day-nhay-quang-multimode-sc-sc-om2-720x530c.webp" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">Dây nhảy quang SC SC Multimode OM2</a></h4>
+                                            <p class="product__all-price">2,700,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="3">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/ex9214-base3b-ac-720x530c.webp" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">
+                                                EX9214-BASE3B-AC</a></h4>
+                                            <p class="product__all-price">52,000,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="4">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/srx5800base-hc-dc-720x530c.webp" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">SRX5800BASE-HC-DC</a></h4>
+                                            <p class="product__all-price">72,000,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="5">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/q9h62a-720x530c.webp" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">Bộ Phát Wifi Q9H62A</a></h4>
+                                            <p class="product__all-price">1,300,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="6">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/901-h550-ww00-720x530c.webp" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">Bộ phát Wifi 901-H550-WW00</a></h4>
+                                            <p class="product__all-price">780,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="7">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/26368_c50.jpg" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">Bộ phát wifi TP-Link Archer C50 (Chuẩn AC/ AC1200Mbps/ 4 Ăng-ten ngoài/ 25 User)</a></h4>
+                                            <p class="product__all-price">599,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="8">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/40940_c54.jpg" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">Bộ phát wifi TP-Link Archer C54 (Chuẩn AC/ AC1200Mbps/ 4 Ăng-ten ngoài/ 25 User)</a></h4>
+                                            <p class="product__all-price">429,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <!--Product All Single Start-->
+                                <div class="col-xl-4 col-lg-4 col-md-6">
+                                    <div class="product__all-single" data-id="9">
+                                        <div class="product__all-img">
+                                            <img src="../IMG/shop/53717_cac_mang_khong_day_tp_link_usb_archer_t3u_nano_4.jpg" alt="" class="product-img">
+                                            <div class="product__all-btn-box">
+                                                <button class="thm-btn product__all-btn">Thêm vào giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                        <div class="product__all-content">
+                                            <h4 class="product__all-title"><a href="../HTML/chitietsanpham.html">Cạc mạng không dây TP-Link USB Archer T3U Nano (Chuẩn AC/ AC1300Mbps/ Ăng-ten ngầm)</a></h4>
+                                            <p class="product__all-price">369,000 đ</p>
+                                            <div class="product__all-review">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Product All Single End-->
+                                <nav aria-label="Page navigation" class="mt-4">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Trước</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Sau</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Product End-->
+    </div>
+  <!--Site Footer Start-->
+  <footer class="site-footer">
+      <div class="site-footer-bg" style="background-image: url(../IMG/site-footer-bg.png);">
+      </div>
+      <div class="container">
+         <div class="site-footer__top">
+            <div class="row">
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                     <div class="footer-widget__column footer-widget__about">
+                        <div class="footer-widget__logo">
+                              <a href="index.html"><img src="../IMG/vh-1.png" alt="" style="width: 300px;"></a>
+                        </div>
+                        <div class="footer-widget__about-text-box">
+                              <p class="footer-widget__about-text"><span style="font-weight:bold; text-transform: uppercase;">Thiết bị mạng Cisco, Juniper, thiết bị quang chính hãng</span><br>Networks Authorized Distributor - Phân phối thiết bị mạng uy tín ®<br>
+                                 Website: <b>VIETHACOMPANY.COM</b>
+                        </div>
+                        <div class="site-footer__social">
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-facebook"></i></a>
+                              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                     <div class="footer-widget__column footer-widget__contact clearfix">
+                        <h3 class="footer-widget__title">Thông tin liên hệ</h3>
+                        <ul class="footer-widget__contact-list list-unstyled clearfix">
+                              <li>
+                                 <div class="icon">
+                                    <i class="fas fa-envelope-open-text" style="color: white; font-size: 20px;"></i>
+                                 </div>
+                                 <div class="text">
+                                    <p><a href="mailto:vietha@company.com">Mail: vietha@company.com</a></p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="icon">
+                                       <i class="fas fa-map-marker-alt" style="color: white; font-size: 20px;"></i>
+                                 </div>
+                                 <div class="text">
+                                    <p>Chung cư Đạt Gia, Đường cây Keo, P. Tam Phú, Thành Phố Thủ Đức</p>
+                                 </div>
+                              </li>
+                        </ul>
+                        <div class="footer-widget__open-hour">
+                              <h3 class="footer-widget__open-hour-title">Giờ mở cửa</h3>
+                              <h3 class="footer-widget__open-hour-text">Thứ Hai – Thứ 7: 8:00 am đến 6:00 pm Sunday:
+                                 Đóng cửa</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                     <div class="footer-widget__column footer-widget__gallery clearfix">
+                        <h3 class="footer-widget__title">Instagram</h3>
+                        <ul class="footer-widget__gallery-list list-unstyled clearfix">
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-1.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-2.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-3.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-4.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-5.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-6.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                     <div class="footer-widget__column footer-widget__newsletter">
+                        <h3 class="footer-widget__title">Nhận tin mới</h3>
+                        <p class="footer-widget__newsletter-text">Đăng ký bản tin của chúng tôi để nhận được
+                           cập nhật & tin tức mới nhất.</p>
+                        <form class="footer-widget__newsletter-form">
+                              <div class="footer-widget__newsletter-input-box">
+                                 <input type="email" placeholder="Email address" name="email">
+                                 <button type="submit" class="footer-widget__newsletter-btn"><i
+                                          class="far fa-paper-plane"></i></button>
+                              </div>
+                        </form>
+                        <div class="footer-widget__phone">
+                              <div class="footer-widget__phone-icon">
+                                 <i class="fas fa-blender-phone"></i>
+                              </div>
+                              <div class="footer-widget__phone-text">
+                                 <a href="tel:+201146198234">+201146198234</a>
+                                 <p>Liên hệ tư vấn</p>
+                              </div>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+         <div class="site-footer__bottom">
+            <div class="row">
+                  <div class="col-xl-12">
+                     <div class="site-footer__bottom-inner rounded mb-3">
+                        <p class="site-footer__bottom-text">© All Copyright 2022 by <a href="../HTML/home.html">VIETHA COMPANY</a>
+                        </p>
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </div>
+</footer>
+<!--Site Footer End-->
+    
+ </body>
+
+</html>

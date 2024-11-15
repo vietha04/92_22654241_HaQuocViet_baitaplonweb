@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../IMG/vh-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/wow/wow.js"></script>
+    <script src="../JS/custom.js"></script>
+
+
+    <link rel="stylesheet" href="/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="../vendors/animate/custom-animate.css">
+    <script src="../vendors/odometer/odometer.min.js"></script>
+    <link rel="stylesheet" href="../vendors/odometer/odometer.min.css">
+    <script src="../vendors/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="../vendors/swiper/swiper.min.css">
+    
+    <title>Giới Thiệu - Bán Sản Phẩm Thiết bị mạng</title>
+</head>
+
+<body>
+   <!-- header -->
+   <header class="clearfix" id="header">
+      <section class="header">
+          <div class="top-header">
+              <div class="container">
+                  <div class="row align-items-center g-1">
+                      <div class="col-md-3 col-6 mx-auto">
+                          <div class="logo">
+                              <img src="../IMG/ch-1.png" alt="Logo" />
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-12">
+                          <div class="search">
+                              <form class="form-inline justify-content-center row">
+                                  <div class="form-search col-12">
+                                      <input class="form-control w-100" type="search" placeholder="Tìm kiếm ..." aria-label="Search">
+                                      <button class="btn btn-search" type="submit">
+                                          <i class="fa fa-search" aria-hidden="true"></i>
+                                      </button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="col-md-3 text-start d-none d-md-flex justify-content-center align-items-center">
+                          <div class="main-menu__call d-flex align-items-center">
+                              <div class="main-menu__call-icon">
+                                  <i class="fas fa-phone"></i>
+                              </div>
+                              <div class="main-menu__call-content">
+                                  <a href="tel:+201146198234">+201146198234</a>
+                                  <p>Liên hệ Hotline</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-2 d-inline-flex justify-content-end">
+                          <button type="button" class="btn-cart mx-1 d-none d-md-inline-flex align-items-center rounded">
+                              <i class="fa fa-user mr-2" aria-hidden="true"></i>
+                              <a href="../HTML/signin.html" class="text-white p-1">Đăng nhập</a>
+                          </button>
+                          <a href="cart.html" class="btn position-relative d-none d-md-inline-flex align-items-center" style="background-color: #4bb6b7; color: white;">
+                              <i class="fas fa-shopping-cart"></i>
+                              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge" style="background-color: #4bb6b7;" data-count="0">0</span>
+                          </a>
+                      </div>
+                      <!-- Mobile Menu Button -->
+                      <div class="col-12 text-end d-md-none p-2 d-flex align-items-center justify-content-between fixel navbar-fixed-top" style="border: 1px solid #4bb6b7; border-radius: 5px; background: #FFFFFF24; backdrop-filter: blur(10px);">
+                          <button class="menu-toggle">
+                              <i class="fas fa-bars"></i>
+                          </button>
+                          <button type="button" class="btn-cart rounded mx-1">
+                              <i class="fa fa-user mr-2" aria-hidden="true"></i>
+                              <a href="../HTML/signin.html" class="text-white p-1">Đăng nhập</a>
+                          </button>
+                          <a href="cart.html" class="btn position-relative" style="background-color: #4bb6b7; color: white;">
+                              <i class="fas fa-shopping-cart"></i>
+                              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge" style="background-color: #4bb6b7;" data-count="0">0</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+           
+      </section>
+
+      <!-- Desktop Menu -->
+      <nav class="navbar navbar-expand-lg d-none d-md-block navbar-fixed-top">
+          <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mx-auto">
+                      <li class="nav-item">
+                          <a class="nav-link " href="home.html">Trang Chủ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="gioithieu.html">Giới Thiệu</a>
+                        </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Sản Phẩm
+                              <span class="ct-menu-badge">Hot</span>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/cisco-logo-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Cisco</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/juniper-networks-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Juniper</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/day-cap-quang-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Cáp Quang</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/tuong-lua-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Tường Lửa Firewall</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/bo-phat-song-wifi-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Bộ Phát Wifi Router Wifi</span>
+                            </a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="tintuc.html">Tin Tức</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                      </li>
+                     
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <nav id="mobileNav" class="nav-menu">
+          <div class="nav-header d-flex flex-row">
+              <div class="mobile-logo">
+                  <img src="../IMG/vh-1.png" alt="Logo" style="width: 200px; margin: 20px;">
+              </div>
+              <div class="menu-close">
+                  <i class="fas fa-times"></i>
+              </div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="home.html">Trang Chủ</a></li>
+            <li><a href="gioithieu.html">Giới Thiệu</a></li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Sản Phẩm
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/cisco-logo-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Cisco</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/juniper-networks-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Juniper</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/day-cap-quang-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Cáp Quang</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/tuong-lua-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Tường Lửa Firewall</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/bo-phat-song-wifi-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Bộ Phát Wifi Router Wifi</span>
+                </a></li>
+               </ul>
+           </li>
+            <li><a href="tintuc.html">Tin Tức</a></li>
+            <li><a href="lienhe.html">Liên Hệ</a></li>
+            
+        </ul>
+      </nav>
+  </header>
+  <!--end header -->
+    <div class="content">
+        <!--Page Header Start-->
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(../IMG/page-header-bg.jpg)">
+            </div>
+            <div class="page-header-shape-1"><img src="../IMG/page-header-shape-1.png" alt=""></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="home.html">Trang Chủ</a></li>
+                        <li><span>/</span></li>
+                        <li>Giới Thiệu</li>
+                    </ul>
+                    <h2>Về Chúng Tôi</h2>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+
+        <!--About Four Start-->
+        <section class="about-four">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="about-four__left">
+                            <div class="about-four__img-box wow fadeInLeft animated" data-wow-delay="100ms"
+                                data-wow-duration="2500ms">
+                                <div class="about-four__img">
+                                    <img src="../IMG/about-four-img-1.jpg" alt="">
+                                </div>
+                                <div class="about-four__img-two">
+                                    <img src="../IMG/about-four-img-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="about-four__right">
+                            <div class="section-title text-left">
+                                <div class="section-sub-title-box">
+                                    <p class="section-sub-title">Về Công Ty</p>
+                                    <div class="section-title-shape-1">
+                                        <img src="../IMG/section-title-shape-1.png" alt="">
+                                    </div>
+                                    <div class="section-title-shape-2">
+                                        <img src="../IMG/section-title-shape-2.png" alt="">
+                                    </div>
+                                </div>
+                                <h2 class="section-title__title">Phân phối thiết bị mạng chính hãng uy tín hàng đầu Việt Nam</h2>
+                            </div>
+                            <p class="about-four__text-1">VIETHACOMPANY là nhà phân phối sản phẩm thiết bị mạng chính hãng uy tín danh tiếng tại thị trường Việt Nam.</p>
+                            <p class="about-four__text-2">Trung thành với phương châm “SẢN PHẨM GIÁ GỐC, GIAO HÀNG TẬN NƠI”, VIETHACOMPANY luôn mang đến cho Quý khách sự hài lòng khi chọn mua các loại thiết bị chính hãng, giá tốt nhất và được giao hàng đến tận nơi.
+
+                                Đội ngũ kinh doanh, kỹ sư Điện tử-Viễn thông giàu kinh nghiệm luôn sẵn  sàng  tư vấn, cung cấp các Giải pháp Viễn thông hiệu quả và tiết kiệm chi phí nhất cho quý khách.
+                                
+                                Đội ngũ nhân viên kỹ thuật trẻ được đào tạo chuyên môn tốt, nhiệt tình, tận tụy, phong cách phục vụ chuyên nghiệp sẽ làm Quý khách hài lòng.</p>
+                            <div class="about-four__founder">
+                                <div class="about-four__founder-img">
+                                    <img src="../IMG/img-qv.jpg" alt="" style="height: 80px; width: 80px;">
+                                </div>
+                                <div class="about-four__founder-content">
+                                    <h3 class="about-four__founder-name">VIETHA</h3>
+                                    <p class="about-four__founder-sub-title">Founder of VIETHACOMPANY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About Four End-->
+
+        <!--Brand One Start-->
+        <section class="brand-one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="brand-one__title">
+                            <h2>Được tin cậy và tài trợ bởi hơn 800 công ty</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="brand-one__main-content">
+                            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+                        "0": {
+                            "spaceBetween": 30,
+                            "slidesPerView": 2
+                        },
+                        "375": {
+                            "spaceBetween": 30,
+                            "slidesPerView": 2
+                        },
+                        "575": {
+                            "spaceBetween": 30,
+                            "slidesPerView": 3
+                        },
+                        "767": {
+                            "spaceBetween": 50,
+                            "slidesPerView": 4
+                        },
+                        "991": {
+                            "spaceBetween": 50,
+                            "slidesPerView": 5
+                        },
+                        "1199": {
+                            "spaceBetween": 100,
+                            "slidesPerView": 5
+                        }
+                    }}'>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-1.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-2.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-3.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-4.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-5.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-1.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-2.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-3.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-4.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../IMG/brand-1-5.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Brand One End-->
+
+        <!--CTA One Start-->
+        <section class="cta-one cta-four">
+            <div class="container">
+                <div class="cta-one__content">
+                    <div class="cta-one__inner">
+                        <div class="cta-one__left">
+                            <h3 class="cta-one__title">Hãy liên hệ ngay với chúng tôi</h3>
+                        </div>
+                        <div class="cta-one__right">
+                            <div class="cta-one__call">
+                                <div class="cta-one__call-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="cta-one__call-number">
+                                    <a href="tel:+201146198234">+201146198234</a>
+                                    <p>Liên Hệ Hotline</p>
+                                </div>
+                            </div>
+                            <div class="cta-one__btn-box">
+                                <a href="lienhe.html" class="thm-btn cta-one__btn">Liên Hệ Ngay</a>
+                            </div>
+                        </div>
+                        <div class="cta-one__img">
+                            <img src="../IMG/cta-one-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--CTA One End-->
+
+        <!--Team One Start-->
+        <section class="team-one team-two">
+            <div class="container">
+                <div class="section-title text-center">
+                    <div class="section-sub-title-box">
+                        <p class="section-sub-title">Chuyên Gia</p>
+                        <div class="section-title-shape-1">
+                            <img src="../IMG/section-title-shape-1.png" alt="">
+                        </div>
+                        <div class="section-title-shape-2">
+                            <img src="../IMG/section-title-shape-2.png" alt="">
+                        </div>
+                    </div>
+                    <h2 class="section-title__title">Đội Ngũ Của Chúng Tôi</h2>
+                </div>
+                <div class="row">
+                    <!--Team One Single Start-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img">
+                                <div class="team-one__img-box">
+                                    <img src="../IMG/img-qv-1.png" alt="">
+                                </div>
+                                <ul class="list-unstyled team-one__social">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-one__content">
+                                <p class="team-one__sub-title">Manager</p>
+                                <h3 class="team-one__name"><a href="#">Hà Việt</a></h3>
+                                <ul class="list-unstyled team-one__social-two">
+                                    <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img">
+                                <div class="team-one__img-box">
+                                    <img src="../IMG/img-qv-1.png" alt="">
+                                </div>
+                                <ul class="list-unstyled team-one__social">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-one__content">
+                                <p class="team-one__sub-title">Manager</p>
+                                <h3 class="team-one__name"><a href="#">Việt Hà</a></h3>
+                                <ul class="list-unstyled team-one__social-two">
+                                    <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    <!--Team One Single Start-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img">
+                                <div class="team-one__img-box">
+                                    <img src="../IMG/img-qv-1.png" alt="">
+                                </div>
+                                <ul class="list-unstyled team-one__social">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-one__content">
+                                <p class="team-one__sub-title">Manager</p>
+                                <h3 class="team-one__name"><a href="#">Việt Quốc</a></h3>
+                                <ul class="list-unstyled team-one__social-two">
+                                    <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                </div>
+            </div>
+        </section>
+        <!--Team One End-->
+
+        <!--Counter One Start-->
+        <Section class="counter-one">
+            <div class="counter-one-shape-1 float-bob-y">
+                <img src="../IMG/counter-one-shape-1.png" alt="">
+            </div>
+            <div class="counter-one-shape-2 float-bob-y">
+                <img src="../IMG/counter-one-shape-2.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!--Counter One Single Start-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="counter-one__single">
+                            <div class="counter-one__top">
+                                <div class="counter-one__icon">
+                                    <i class="fas fa-clipboard-list" style="font-size: 60px;"></i>
+                                </div>
+                                <div class="counter-one__count-box">
+                                    <div class="counter-one__count-box-inner">
+                                        <h3 class="odometer" data-count="2.6">00</h3>
+                                        <span class="counter-one__plus">k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="counter-one__text">Đã cung cấp bảo hiểm</p>
+                        </div>
+                    </div>
+                    <!--Counter One Single End-->
+                    <!--Counter One Single Start-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="counter-one__single">
+                            <div class="counter-one__top">
+                                <div class="counter-one__icon">
+                                    <i class="fas fa-users" style="font-size: 60px;"></i>
+                                </div>
+                                <div class="counter-one__count-box">
+                                    <div class="counter-one__count-box-inner">
+                                        <h3 class="odometer" data-count="89">00</h3>
+                                        <span class="counter-one__plus">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="counter-one__text">Đội ngũ chuyên nghiệp</p>
+                        </div>
+                    </div>
+                    <!--Counter One Single End-->
+                    <!--Counter One Single Start-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="counter-one__single">
+                            <div class="counter-one__top">
+                                <div class="counter-one__icon">
+                                    <i class="fas fa-hands" style="font-size: 60px;"></i>
+                                </div>
+                                <div class="counter-one__count-box">
+                                    <div class="counter-one__count-box-inner">
+                                        <h3 class="odometer" data-count="2.8">00</h3>
+                                        <span class="counter-one__plus">k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="counter-one__text">Khách hàng hài lòng</p>
+                        </div>
+                    </div>
+                    <!--Counter One Single End-->
+                    <!--Counter One Single Start-->
+                    <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="counter-one__single">
+                            <div class="counter-one__top">
+                                <div class="counter-one__icon">
+                                    <i class="fas fa-calendar-check" style="font-size: 60px;"></i>
+                                </div>
+                                <div class="counter-one__count-box">
+                                    <div class="counter-one__count-box-inner">
+                                        <h3 class="odometer" data-count="99">00</h3>
+                                        <span class="counter-one__plus">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="counter-one__text">Tỷ lệ thành công </p>
+                        </div>
+                    </div>
+                    <!--Counter One Single End-->
+                </div>
+            </div>
+        </Section>
+        <!--Counter One End-->
+    </div>
+  <!--Site Footer Start-->
+  <footer class="site-footer">
+      <div class="site-footer-bg" style="background-image: url(../IMG/site-footer-bg.png);">
+      </div>
+      <div class="container">
+         <div class="site-footer__top">
+            <div class="row">
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                     <div class="footer-widget__column footer-widget__about">
+                        <div class="footer-widget__logo">
+                              <a href="index.html"><img src="../IMG/vh-1.png" alt="" style="width: 300px;"></a>
+                        </div>
+                        <div class="footer-widget__about-text-box">
+                              <p class="footer-widget__about-text"><span style="font-weight:bold; text-transform: uppercase;">Thiết bị mạng Cisco, Juniper, thiết bị quang chính hãng</span><br>Networks Authorized Distributor - Phân phối thiết bị mạng uy tín ®<br>
+                                 Website: <b>VIETHACOMPANY.COM</b>
+                        </div>
+                        <div class="site-footer__social">
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-facebook"></i></a>
+                              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                     <div class="footer-widget__column footer-widget__contact clearfix">
+                        <h3 class="footer-widget__title">Thông tin liên hệ</h3>
+                        <ul class="footer-widget__contact-list list-unstyled clearfix">
+                              <li>
+                                 <div class="icon">
+                                    <i class="fas fa-envelope-open-text" style="color: white; font-size: 20px;"></i>
+                                 </div>
+                                 <div class="text">
+                                    <p><a href="mailto:vietha@company.com">Mail: vietha@company.com</a></p>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="icon">
+                                       <i class="fas fa-map-marker-alt" style="color: white; font-size: 20px;"></i>
+                                 </div>
+                                 <div class="text">
+                                    <p>Chung cư Đạt Gia, Đường cây Keo, P. Tam Phú, Thành Phố Thủ Đức</p>
+                                 </div>
+                              </li>
+                        </ul>
+                        <div class="footer-widget__open-hour">
+                              <h3 class="footer-widget__open-hour-title">Giờ mở cửa</h3>
+                              <h3 class="footer-widget__open-hour-text">Thứ Hai – Thứ 7: 8:00 am đến 6:00 pm Sunday:
+                                 Đóng cửa</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                     <div class="footer-widget__column footer-widget__gallery clearfix">
+                        <h3 class="footer-widget__title">Instagram</h3>
+                        <ul class="footer-widget__gallery-list list-unstyled clearfix">
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-1.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-2.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-3.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-4.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-5.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="footer-widget__gallery-img">
+                                    <img src="../IMG/footer-widget-gallery-img-6.jpg" alt="">
+                                    <a href="#"><span class="fa fa-link"></span></a>
+                                 </div>
+                              </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                     <div class="footer-widget__column footer-widget__newsletter">
+                        <h3 class="footer-widget__title">Nhận tin mới</h3>
+                        <p class="footer-widget__newsletter-text">Đăng ký bản tin của chúng tôi để nhận được
+                           cập nhật & tin tức mới nhất.</p>
+                        <form class="footer-widget__newsletter-form">
+                              <div class="footer-widget__newsletter-input-box">
+                                 <input type="email" placeholder="Email address" name="email">
+                                 <button type="submit" class="footer-widget__newsletter-btn"><i
+                                          class="far fa-paper-plane"></i></button>
+                              </div>
+                        </form>
+                        <div class="footer-widget__phone">
+                              <div class="footer-widget__phone-icon">
+                                 <i class="fas fa-blender-phone"></i>
+                              </div>
+                              <div class="footer-widget__phone-text">
+                                 <a href="tel:+201146198234">+201146198234</a>
+                                 <p>Liên hệ tư vấn</p>
+                              </div>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+         <div class="site-footer__bottom">
+            <div class="row">
+                  <div class="col-xl-12">
+                     <div class="site-footer__bottom-inner rounded mb-3">
+                        <p class="site-footer__bottom-text">© All Copyright 2022 by <a href="../HTML/home.html">VIETHA COMPANY</a>
+                        </p>
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </div>
+</footer>
+<!--Site Footer End-->
+    
+ </body>
+
+</html>

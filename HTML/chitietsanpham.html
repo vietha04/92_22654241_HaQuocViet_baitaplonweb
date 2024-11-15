@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../IMG/vh-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/jquery-3.7.1.min.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/wow/wow.js"></script>
+    <script src="../JS/custom.js"></script>
+
+
+    <link rel="stylesheet" href="/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="../vendors/animate/custom-animate.css">
+    <script src="../vendors/odometer/odometer.min.js"></script>
+    <link rel="stylesheet" href="../vendors/odometer/odometer.min.css">
+    <script src="../vendors/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="../vendors/swiper/swiper.min.css">
+    
+    <title>Chi Tiết Sản phẩm - Bán Sản Phẩm Thiết bị mạng</title>
+    <script>
+        $(document).ready(function() {
+            $(".quantity-increase").on("click", function () {
+                let inputVal = parseInt($(this).prev().val());
+                if (inputVal < 999) {
+                    $(this).prev().val(inputVal + 1);
+                }
+            });
+
+            $(".quantity-decrease").on("click", function () {
+                let inputVal = parseInt($(this).next().val());
+                if (inputVal > 1) {
+                    $(this).next().val(inputVal - 1);
+                }
+            });
+        });
+    </script>
+    <style>
+        ul.list-unstyled.params {
+            border: 1px solid #4bb6b7;
+            border-radius: 10px 0;
+            padding: 8px 20px;
+            position: relative;
+            float: none;
+            font-size: 15px;
+            background: #fafcfd;
+        }
+        ul.params li .v {
+            color: #4bb6b7;
+            font-weight: 600;
+        }
+        ul.params li.dyn {
+            float: none;
+            width: auto;
+        }
+        .grid-icons {
+            border-radius: 6px;
+            border: 1px solid #4bb6b7;
+            background: #f2f5f9;
+            padding: 0 2rem;
+        }
+        .grid-icons ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0;
+        }
+        .grid-icons li {
+            border-bottom: 1px solid #e3e3e3;
+            display: flex;
+            padding: 1.4rem 0;
+            align-items: center;
+        }
+        .grid-icons li .icon svg {
+            padding-right: 1rem;
+            fill: #4bb6b7 !important;
+            height: 50px;
+            width: 50px;
+        }
+        @media (max-width:768px) {
+            .thm-btn{
+                padding: 17px 35px 17px !important; 
+            }
+        }
+        .box-hotline {
+            background: #4bb6b7;
+            border: 1px solid #42fdff;
+            box-shadow: none;
+            padding: 10px 15px !important;
+        }
+        .box-hotline ul {
+            display: flex;
+            width: 100%;
+            margin: 0;
+        }
+        .box-hotline ul li {
+            flex: 1;
+        }
+        .box-hotline ul li a {
+            font-weight: 600;
+            color: #fff;
+            font-size: 19px;
+        }
+        .box-hotline ul li i{
+            font-size: 20px;
+            margin-right: 0.1rem;
+            color: #ffcc33;
+        }
+        .tabs .tab-content {
+            border-radius: 8px;
+            border: 1px solid #4bb6b7;
+            padding: 10px;
+            line-height: 25px;
+        }
+        .vh-content {
+            font-size: 14px;
+            overflow: auto;
+            position: relative;
+        }
+        .vh-content h2, .vh-content h3{
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+            .box-hotline ul{
+                display: block !important;
+            }
+            .grid-icons ul{
+                display: block !important;
+            }
+            .comments-area .comment-box .author-thumb{
+                height: 80px !important;
+                width: 80px !important;
+            }
+            .col-sm-12 {
+                width: 100%;
+            }
+        }
+        ul.params li{
+            margin: 10px 0;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+   <!-- header -->
+   <header class="clearfix" id="header">
+      <section class="header">
+          <div class="top-header">
+              <div class="container">
+                  <div class="row align-items-center g-1">
+                      <div class="col-md-3 col-6 mx-auto">
+                          <div class="logo">
+                              <img src="../IMG/ch-1.png" alt="Logo" />
+                          </div>
+                      </div>
+                      <div class="col-md-4 col-12">
+                          <div class="search">
+                              <form class="form-inline justify-content-center row ">
+                                  <div class="form-search col-12">
+                                      <input class="form-control w-100" type="search" placeholder="Tìm kiếm ..." aria-label="Search">
+                                      <button class="btn btn-search" type="submit">
+                                          <i class="fa fa-search" aria-hidden="true"></i>
+                                      </button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="col-md-3 text-start d-none d-md-flex justify-content-center align-items-center">
+                          <div class="main-menu__call d-flex align-items-center">
+                              <div class="main-menu__call-icon">
+                                  <i class="fas fa-phone"></i>
+                              </div>
+                              <div class="main-menu__call-content">
+                                  <a href="tel:+201146198234">+201146198234</a>
+                                  <p>Liên hệ Hotline</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-2 d-inline-flex justify-content-end">
+                          <button type="button" class="btn-cart mx-1 d-none d-md-inline-flex align-items-center rounded">
+                              <i class="fa fa-user mr-2" aria-hidden="true"></i>
+                              <a href="../HTML/signin.html" class="text-white p-1">Đăng nhập</a>
+                          </button>
+                          <a href="cart.html" class="btn position-relative d-none d-md-inline-flex align-items-center" style="background-color: #4bb6b7; color: white;">
+                              <i class="fas fa-shopping-cart"></i>
+                              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge" style="background-color: #4bb6b7;"  data-count="0">0</span>
+                          </a>
+                      </div>
+                      <!-- Mobile Menu Button -->
+                      <div class="col-12 text-end d-md-none p-2 d-flex align-items-center justify-content-between fixel navbar-fixed-top" style="border: 1px solid #4bb6b7; border-radius: 5px; background: #FFFFFF24; backdrop-filter: blur(10px);">
+                          <button class="menu-toggle">
+                              <i class="fas fa-bars"></i>
+                          </button>
+                          <button type="button" class="btn-cart rounded mx-1">
+                              <i class="fa fa-user mr-2" aria-hidden="true"></i>
+                              <a href="../HTML/signin.html" class="text-white p-1">Đăng nhập</a>
+                          </button>
+                          <a href="cart.html" class="btn position-relative" style="background-color: #4bb6b7; color: white;">
+                              <i class="fas fa-shopping-cart"></i>
+                              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle cart-badge" style="background-color: #4bb6b7;"  data-count="0">0</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+           
+      </section>
+
+      <!-- Desktop Menu -->
+      <nav class="navbar navbar-expand-lg d-none d-md-block navbar-fixed-top">
+          <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mx-auto">
+                      <li class="nav-item">
+                          <a class="nav-link " href="home.html">Trang Chủ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+                        </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Sản Phẩm
+                              <span class="ct-menu-badge">Hot</span>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/cisco-logo-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Cisco</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/juniper-networks-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Juniper</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/day-cap-quang-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Thiết bị mạng Cáp Quang</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/tuong-lua-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Tường Lửa Firewall</span>
+                            </a></li>
+                            <li><a class="dropdown-item" href="shop.html">
+                                <img src="../IMG/bo-phat-song-wifi-104x104c.webp" alt="" width="52px" height="52px" class="border border-1 me-1 rounded">
+                                <span>Bộ Phát Wifi Router Wifi</span>
+                            </a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="tintuc.html">Tin Tức</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                      </li>
+                     
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <nav id="mobileNav" class="nav-menu">
+          <div class="nav-header d-flex flex-row">
+              <div class="mobile-logo">
+                  <img src="../IMG/vh-1.png" alt="Logo" style="width: 200px; margin: 20px;">
+              </div>
+              <div class="menu-close">
+                  <i class="fas fa-times"></i>
+              </div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="home.html">Trang Chủ</a></li>
+            <li><a href="gioithieu.html">Giới Thiệu</a></li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="shop.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Sản Phẩm
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/cisco-logo-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Cisco</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/juniper-networks-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Juniper</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/day-cap-quang-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Thiết bị mạng Cáp Quang</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/tuong-lua-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Tường Lửa Firewall</span>
+                </a></li>
+                <li><a class="dropdown-item" href="shop.html">
+                    <img src="../IMG/bo-phat-song-wifi-104x104c.webp" alt="" width="30px" height="30px" class="border border-1 me-1 rounded">
+                    <span>Bộ Phát Wifi Router Wifi</span>
+                </a></li>
+               </ul>
+           </li>
+            <li><a href="tintuc.html">Tin Tức</a></li>
+            <li><a href="lienhe.html">Liên Hệ</a></li>
+            
+        </ul>
+      </nav>
+  </header>
+  <!--end header -->
+  <div class="content">
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image: url(../IMG/DrayTek-slide-3.jpg)">
+        </div>
+        <div class="page-header-shape-1"><img src="../IMG/page-header-shape-1.png" alt=""></div>
+        <div class="container">
+            <div class="page-header__inner">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="home.html">Trang Chủ</a></li>
+                    <li><span>/</span></li>
+                    <li> Chi Tiết Sản Phẩm</li>
+                </ul>
+                <h2>Chi Tiết Sản Phẩm</h2>
+            </div>
+        </div>
+    </section>
+    <!--Product Details Start-->
+    <section class="product-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="product-details__img wow animated fadeInLeft" data-wow-delay="100ms">
+                        <img src="../IMG/shop/switch-cisco-c1000fe-48p-4g-l.webp" alt="" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6">
+                    <div class="product-details__top">
+                        <h3 class="product-details__title wow fadeInUpBig animated">Cisco C1000FE-48P-4G-L </h3>
+                            <p class="product__all-price wow fadeInUpBig animated" data-wow-delay="100ms"><span style="color: black;font-weight: normal;">Giá bán:</span> 27,820,000 đ </p>
+                            
+                    </div>
+                    <div class="product-details__reveiw">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>2 Customer Reviews</span>
+                    </div>
+                    <div class="product-details__content">
+                        <p class="product-details__content-text1 fw-bold">Bảng thông số sản phẩm:</p>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12 wow fadeInUpBig animated">
+                                <ul class="list-unstyled params">
+                                    <li class="dyn">
+                                        <span class="n">Hãng sản xuất:</span>
+                                        <span class="v">Cisco  </span>
+                                    </li>
+                                    <li class="dyn">
+                                        <span class="n">Số cổng Ethernet:</span>
+                                        <span class="v">48 FE ports </span>
+                                    </li>
+                                    <li class="dyn">
+                                        <span class="n">Tốc độ:</span>
+                                        <span class="v">10/100 Mbps </span>
+                                    </li>
+                                    <li class="dyn">
+                                        <span class="n">Số cổng SFP:</span>
+                                        <span class="v">2 ports </span>
+                                    </li>
+                                    <li class="dyn">
+                                        <span class="n">Dòng sản phẩm:</span>
+                                        <span class="v">Catalyst 1000  </span>
+                                    </li>
+                                    <li class="dyn">
+                                        <span class="n">Mã sản phẩm:</span>
+                                        <span class="v">C1000FE-48P-4G-L  </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-12 wow fadeInUpBig animated">
+                                <ul class="list-unstyled params">
+                                    <li class="dyn">
+                                        <span class="n">Hệ điều hành:</span>
+                                        <span class="v">Cisco IOS  </span>
+                                    </li>
+                                    <li class="dyn">
+                                        <span class="n">Nhà cung cấp:</span>
+                                        <span class="v">Thiết Bị Mạng</span>
+                                    </li>
+                                    <li class="separator"></li>
+                                    <li>
+                                        <span class="n">Tình trạng:</span>
+                                        <span class="v">Mới 100%</span>
+                                    </li>
+                                    <li>
+                                        <span class="n">Bảo hành:</span>
+                                        <span class="v">Chính hãng</span>
+                                    </li>
+                                    <li>
+                                        <span class="n">Trạng thái: </span>
+                                        <span class="v">Còn hàng</span>
+                                    </li>
+                                    <li>
+        
+                                        <span class="n">Giao hàng:</span>
+                                        <span class="v">Toàn quốc</span>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="product-details__quantity">
+                        <h3 class="product-details__quantity-title">Số lượng:</h3>
+                        <div class="quantity-box">
+                            <button type="button" class="sub quantity-decrease"><i class="fa fa-minus"></i></button>
+                            <input type="number" id="1" value="1" min="1" />
+                            <button type="button" class="add quantity-increase"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+
+
+                    <div class="product-details__buttons">
+                        <div class="product-details__buttons-1">
+                            <a href="cart.html" class="thm-btn"> <i class="fa-solid fa-shopping-cart"></i> Thêm vào giỏ</a>
+                            
+                        </div>
+                        <div class="product-details__buttons-2">
+                            <a href="#" class="thm-btn">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <div class="product-details__social">
+                        <div class="title">
+                            <h3>Chia sẻ với</h3>
+                        </div>
+                        <div class="product-details__social-link">
+                            <a href="#"><span class="fab fa-twitter"></span></a>
+                            <a href="#"><span class="fab fa-facebook"></span></a>
+                            <a href="#"><span class="fab fa-pinterest-p"></span></a>
+                            <a href="#"><span class="fab fa-instagram"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Product Details End-->
+
+    <!--Product Description Start-->
+    <section class="product-description">
+        <div class="container">
+            <div class="grid-icons my-4">
+                <ul class="list-unstyled">
+                    <li>
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#003586" class="bi bi-stopwatch" viewBox="0 0 16 16"><path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z"></path><path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"></path></svg></span>
+                        <span>Đổi trả linh hoạt trong vòng 7 ngày</span></li>
+                    <li><span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#003586" class="bi bi-shield-check" viewBox="0 0 16 16"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"></path><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path></svg>
+                        </span>
+                        <span>Bảo hành chính hãng trên toàn quốc</span></li>
+                    <li class="nb">
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#003586" class="bi bi-box-seam" viewBox="0 0 16 16"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"></path></svg>
+                        </span>
+                        <span>Sản phẩm mới 100% nguyên seal</span></li>
+                    <li class="nb" style="border-bottom: 0px">
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#003586" class="bi bi-truck" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg></span>
+                        <span class="flex-fill">Giao hàng toàn quốc các ngày trong tuần</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="rounded box-hotline">
+                <div class="btt text-uppercase" style="font-size: 15px;font-weight: 600; margin-bottom: 10px; color: #fff; text-align: center;">HỖ TRỢ BÁO GIÁ 24/7
+                     
+                    - LIÊN HỆ VỚI THIẾT BỊ MẠNG ĐỂ CÓ BÁO GIÁ TỐT NHẤT TẠI THỜI ĐIỂM 
+                     
+                    (HOTLINE / SMS / ZALO / EMAIL)</div>
+                 <ul class="list-unstyled">
+                     <li><i class="fa-solid fa-square-phone" style="margin: 0 6px 5px 0"></i><a rel="nofollow" href="tel:0359674282" title="Hotline báo giá Cisco C1000FE-48P-4G-L">035 967 4282</a></li>
+                     <li><i class="fa-solid fa-square-phone" style="margin: 0 6px 5px 0"></i><a rel="nofollow" href="tel:0359674282" title="Hotline 2 báo giá Cisco C1000FE-48P-4G-L">035 967 4283</a></li>
+                     <li><i class="fa-solid fa-envelope" style="margin: 0 6px 5px 0"></i><a rel="nofollow" href="mailto:info@viethacompany.com" title="Email báo giá Cisco C1000FE-48P-4G-L">info@viethacompany.com</a></li>
+                 </ul>
+            </div>
+            <h3 class="product-description__title">Mô tả sản phẩm</h3>
+            <div class="tabs mrg-btm-30">
+                <div class="tab-content">
+                    <div class="tab-pane active" d="tab-product-info">
+                        <div class="vh-content">
+                                <h2><strong>Cisco C1000FE-48P-4G-L Catalyst 1000 48 PoE FE, 2x1G SFP, 2x1G combo uplinks </strong></h2>
+
+                                <p><strong>C1000FE-48P-4G-L</strong> - báo giá phân phối <strong>Cisco C1000FE-48P-4G-L</strong> Cisco Catalyst 1000 48 cổng 10/100 Ethernet PoE+ and 370W PoE budget ports, 2 port 1G SFP and RJ-45 combo uplinks chính hãng, một cấu hình vượt trội đặc biệt thích hợp cho hệ thống mạng các doanh nghiệp hiện nay.</p>
+
+                                <p>Vẫn luôn được đông đảo Qúy khách hàng đánh giá rất cao Cisco C1000FE-48P-4G-L thiết bị chuyển mạch Switch Cisco Catalyst C1000 Series thế hệ mới mà Cisco mới đưa ra thị trường nhằm thay thế dòng Switch Cisco C2960X luôn đảm bảo được các yêu cầu về hiệu năng. <strong>Cisco C1000FE-48P-4G-L</strong> có thể nói là bản nâng cấp vì Cisco đã nghiên cứu dựa trên những tính năng cũ của Switch Cisco C2960X và ngoài ra nó cũng được coi là giải pháp tốt nhất ở thời điểm hiện tại giúp cho doanh nghiệp tiết kiệm một khoản chi phí sử dụng, linh hoạt hơn cho việc triển khai lắp đặt và mở rộng quy mô sử dụng.</p>
+
+                                <p style="text-align: center;"><img alt="C1000FE-48P-4G-L" class="lazy" src="../IMG/shop/switch-cisco-c1000fe-48p-4g-l.webp" width="100%"></p>
+
+                                <p style="text-align:center">Hình ảnh: <strong>Cisco C1000FE-48P-4G-L </strong>Catalyst 1000 48 PoE FE, 2x1G SFP, 2x1G combo uplinks</p>
+
+                                <table class="table-bordered table-light table-hover table-primary table table-striped table-responsive">
+                                <caption><h3><strong>Các mã Cisco Catalyst 1000 24 port, 48 port FE 10/100Mbps</strong></h3></caption>
+                                <thead>
+                                <tr><th scope="col">Mã sản phẩm</th>
+                                        <th scope="col">Mô tả chi tiết</th>
+                                    </tr>
+                                    </thead><tbody>
+                                    <tr>
+                                        <td>Cisco C1000FE-24T-4G-L</td>
+                                        <td>Cisco Catalyst 1000 24 cổng 10/100 Ethernet ports, 2 cổng 1G SFP and RJ-45 combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cisco C1000FE-24P-4G-L</td>
+                                        <td>Cisco Catalyst 1000 24 cổng 10/100 Ethernet PoE+ ports and 195W PoE budget, 2 cổng 1G SFP and RJ-45 combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cisco C1000FE-48T-4G-L</td>
+                                        <td>Cisco Catalyst 1000 48 cổng 10/100 Ethernet ports, 2 port 1G SFP and RJ-45 combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cisco C1000FE-48P-4G-L</td>
+                                        <td>Cisco Catalyst 1000 48 cổng 10/100 Ethernet PoE+ and 370W PoE budget ports, 2 port 1G SFP and RJ-45 combo uplinks</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+
+
+                                <table class="table-bordered table-light table-hover table-primary table table-striped table-responsive">
+                                <caption><h3><strong>Module quang SFP sử dụng cho Cisco Catalyst 1000 24 port, 48 port FE 10/100Mbps</strong></h3></caption>
+                                <thead>
+                                <tr><th scope="col">Mã module quang</th>
+                                    <th scope="col">Mô tả chi tiết</th>
+                                    </tr>
+                                    </thead><tbody>
+                                    <tr>
+                                        <td>GLC-TE</td>
+                                        <td>Module quang Cisco 1000BASE-T SFP transceiver module for Category 5 copper wire</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GLC-SX-MMD</td>
+                                        <td>Module quang Cisco 1000BASE-SX SFP transceiver module, MMF, 850nm, DOM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GLC-LH-SMD</td>
+                                        <td>Module quang Cisco 1000BASE-LX/LH SFP transceiver module, MMF/SMF, 1310nm, DOM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GLC-EX-SMD</td>
+                                        <td>Module quang Cisco 1000BASE-EX SFP transceiver module, SMF, 1310nm, DOM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GLC-ZX-SMD</td>
+                                        <td>Module quang Cisco 1000BASE-ZX SFP transceiver module, SMF, 1550nm, DOM</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                                <table class="table-bordered table-light table-hover table-primary table table-striped table-responsive">
+                                <caption><h3><strong>Bảng giá Cisco Catalyst 1000 24 port, 48 port FE 10/100Mbps</strong></h3></caption>
+                                <thead>
+                                <tr><th scope="col">Product</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">List Price<br>
+                                        (USD)</th>
+                                        <th scope="col">Giá List<br>
+                                        VNĐ</th>
+                                    </tr>
+                                    </thead><tbody>
+                                    <tr>
+                                        <td>C1000FE-24P-4G-L</td>
+                                        <td>Catalyst 1000 24 PoE FE, 2x1G SFP, 2x1G combo uplinks</td><td>&gt;2,011</td><td>&gt;47,265,080</td>
+                                    </tr>
+                                    <tr>
+                                        <td>C1000FE-24T-4G-L</td>
+                                        <td>Catalyst 1000 24 port FE, 2x1G SFP, 2x1G combo uplinks</td><td>&gt;863</td><td>&gt;20,269,690</td>
+                                    </tr>
+                                    <tr>
+                                        <td>C1000FE-48T-4G-L</td>
+                                        <td>Catalyst 1000 48 port FE, 2x1G SFP, 2x1G combo uplinks</td><td>&gt;1,444</td><td>&gt;33,942,460</td>
+                                    </tr>
+                                    <tr>
+                                        <td>C1000FE-48P-4G-L</td>
+                                        <td>Catalyst 1000 48 PoE FE, 2x1G SFP, 2x1G combo uplinks</td><td>&gt;3,406</td><td>&gt;80,037,005</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+
+                                <p style="text-align: center;"><img alt="Cisco 2960+ plus và 2960L đã chuyển sang Cisco 1000FE Series" class="lazy" src="../IMG/shop/switch-cisco-catalyst-1000-116x116c.webp" width="100%"></p>
+
+                                <h3><strong>Cisco 2960+ plus và 2960L đã chuyển sang Cisco 1000FE Series</strong></h3>
+                                <table class="table-bordered table-light table-hover table-primary table table-striped table-responsive">
+                                <thead>
+                                <tr><th scope="col">Mã ngừng SX End-of-Sale</th>
+                                        <th scope="col">Mô tả mã EOL ngừng sản xuất</th>
+                                        <th scope="col" style="width:20%">Sản phẩm Cisco mới thay thế</th>
+                                        <th scope="col">Mô tả mã Replacement thay mới</th>
+                                    </tr>
+                                    </thead><tbody>
+                                    <tr>
+                                        <td>WS-C2960+24LC-L++</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 (8 PoE) + 2 T/SFP LAN Base</td>
+                                        <td>C1000-24P-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24LC-S</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 (8 PoE) + 2 T/SFP LAN Lite</td>
+                                        <td>C1000-24P-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24LC-S</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 (8 PoE) + 2 T/SFP LAN Lite</td>
+                                        <td>C1000FE-24P-4G-L</td>
+                                        <td>Catalyst 1000 24 PoE FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24LC-S</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 (8 PoE) + 2 T/SFP LAN Lite</td>
+                                        <td>C1000FE-24P-4G-L</td>
+                                        <td>Catalyst 1000 24 PoE FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24PC-L</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 PoE + 2 T/SFP LAN Base</td>
+                                        <td>C1000-24FP-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, Full POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24PC-L++</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 PoE + 2 T/SFP LAN Base</td>
+                                        <td>C1000-24FP-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, Full POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24PC-S</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 PoE + 2 T/SFP LAN Lite</td>
+                                        <td>C1000-24FP-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, Full POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24PC-S++</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 PoE + 2 T/SFP LAN Lite</td>
+                                        <td>C1000-24FP-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, Full POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24TC-L</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 + 2T/SFP LAN Base</td>
+                                        <td>C1000-24T-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24TC-L++</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 + 2T/SFP LAN Base</td>
+                                        <td>C1000-24T-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24TC-S</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000-24T-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24TC-S</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000FE-24T-4G-L</td>
+                                        <td>Catalyst 1000 24 port FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24TC-S++</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000-24T-4G-L</td>
+                                        <td>Catalyst 1000 24port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+24TC-S++</td>
+                                        <td>Catalyst 2960 Plus 24 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000FE-24T-4G-L</td>
+                                        <td>Catalyst 1000 24 port FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48PST-L</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 PoE + 2 1000BT +2 SFP LAN Base</td>
+                                        <td>C1000-48P-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48PST-L++</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 PoE + 2 1000BT +2 SFP LAN Base</td>
+                                        <td>C1000-48P-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48PST-S</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 PoE + 2 1000BT +2 SFP LAN Lite</td>
+                                        <td>C1000-48P-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48PST-S</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 PoE + 2 1000BT +2 SFP LAN Lite</td>
+                                        <td>C1000FE-48P-4G-L</td>
+                                        <td>Catalyst 1000 48 PoE FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48PST-S++</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 PoE + 2 1000BT +2 SFP LAN Lite</td>
+                                        <td>C1000-48P-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, POE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48PST-S++</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 PoE + 2 1000BT +2 SFP LAN Lite</td>
+                                        <td>C1000FE-48P-4G-L</td>
+                                        <td>Catalyst 1000 48 PoE FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48TC-L</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 + 2 T/SFP LAN Base</td>
+                                        <td>C1000-48T-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48TC-L++</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 + 2 T/SFP LAN Base</td>
+                                        <td>C1000-48T-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48TC-S</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000-48T-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48TC-S</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000FE-48T-4G-L</td>
+                                        <td>Catalyst 1000 48 port FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48TC-S++</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000-48T-4G-L</td>
+                                        <td>Catalyst 1000 48port GE, 4x1G SFP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WS-C2960+48TC-S++</td>
+                                        <td>Catalyst 2960 Plus 48 10/100 + 2 T/SFP LAN Lite</td>
+                                        <td>C1000FE-48T-4G-L</td>
+                                        <td>Catalyst 1000 48 port FE, 2x1G SFP port, 2x1G combo uplinks</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+
+                                <p>Thiết bị chuyển mạch Switch Cisco C1000FE-48P-4G-L Catalyst 1000 48 PoE FE, 2x1G SFP, 2x1G combo uplinks chính hãng hiện đang được phân phối bởi thietbimang.com với đầy đủ các chương trình hỗ trợ sản phẩm bao gồm triển khai lắp đặt, bảo hành...Hãy liên hệ với chúng tôi nếu bạn có nhu cầu đặt hàng hoặc cần giải đáp các thắc mắc về sản phẩm.</p>
+                                                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Product Description End-->
+
+    <!--Review One Start-->
+    <section class="review-one">
+        <div class="container">
+            <div class="comments-area">
+                <div class="review-one__title">
+                    <h3>Khách hàng nói về sản phẩm</h3>
+                </div>
+                <!--Start Comment Box-->
+                <div class="comment-box">
+                    <div class="comment">
+                        <div class="author-thumb">
+                            <figure class="thumb"><img src="../IMG/img-qv-1.png" alt="">
+                            </figure>
+                        </div>
+
+                        <div class="review-one__content">
+                            <div class="review-one__content-top">
+                                <div class="info">
+                                    <h2>Nhân Đỗ <span>20 Sep, 2022 . 4:00 pm</span></h2>
+                                </div>
+                                <div class="reply-btn">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+
+                            <div class="review-one__content-bottom">
+                                <p>Bên Thiết Bị Mạng làm việc rất chuyên nghiệp, bán hàng và hỗ trợ có tâm và có tầm rất bài bản. Tôi chỉ chọn bên bạn khi có nhu cầu. Xin chân thành cảm ơn các bạn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Comment Box-->
+
+                <!--Start Comment Box-->
+                <div class="comment-box">
+                    <div class="comment">
+                        <div class="author-thumb">
+                            <figure class="thumb"><img src="../IMG/img-qv.jpg" alt="">
+                            </figure>
+                        </div>
+
+                        <div class="review-one__content">
+                            <div class="review-one__content-top">
+                                <div class="info">
+                                    <h2>Thắng Lợi <span>20 Sep, 2022 . 4:00 pm</span></h2>
+                                </div>
+                                <div class="reply-btn">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+
+                            <div class="review-one__content-bottom">
+                                <p>Đơn vị rất uy tín ai đã làm rồi thì là lựa chọn số 1 luôn. Dự án ở Thảo Điền đã bàn giao Thiết Bị Mạng làm việc rất uy tín, chuyên nghiệp, hỗ trợ nha </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Comment Box-->
+            </div>
+        </div>
+    </section>
+    <!--Review One End-->
+
+    <!--Start Review Form-->
+    <section class="review-form-one">
+        <div class="container">
+            <div class="review-form-one__inner">
+                <h3 class="review-form-one__title">Thêm đánh giá về sản phẩm</h3>
+                <div class="flex flex-col gap-5 m-3 border border-1">
+                    <div class="row items-center rounded p-3 justify-content-between" style="background-color: #FFFBEB;">
+                        <div class="col-8 col-sm-8 d-flex flex-column justify-content-center align-items-start">
+                            <div class="flex items-center p-1 fw-semibold" style="font-size: 20px;">Trở thành người đầu tiên <span>đánh giá về sản phẩm.</span>
+                            </div>
+                            <button type="button" class="btn btn-danger fw-semibold text-white">
+                                Đánh giá về sản phẩm
+                            </button>
+                        </div>
+                        <div class="col-4 col-sm-4">
+                            <img src="../IMG/imgStar.png" alt="" width="100%">
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="review-form-one__form contact-form-validated"
+                    novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="review-form-one__input-box text-message-box">
+                                <textarea name="message" placeholder="Nhập nội dung bình luận"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="review-form-one__input-box">
+                                <input type="text" placeholder="Tên của bạn" name="name">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="review-form-one__input-box">
+                                <input type="email" placeholder="Email của bạn" name="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <button type="submit" class="thm-btn review-form-one__btn">Gửi bình luận</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--End Review Form-->
+  </div>
+   <!--Site Footer Start-->
+   <footer class="site-footer">
+    <div class="site-footer-bg" style="background-image: url(../IMG/site-footer-bg.png);">
+    </div>
+    <div class="container">
+       <div class="site-footer__top">
+          <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                   <div class="footer-widget__column footer-widget__about">
+                      <div class="footer-widget__logo">
+                            <a href="index.html"><img src="../IMG/vh-1.png" alt="" style="width: 300px;"></a>
+                      </div>
+                      <div class="footer-widget__about-text-box">
+                            <p class="footer-widget__about-text"><span style="font-weight:bold; text-transform: uppercase;">Thiết bị mạng Cisco, Juniper, thiết bị quang chính hãng</span><br>Networks Authorized Distributor - Phân phối thiết bị mạng uy tín ®<br>
+                               Website: <b>VIETHACOMPANY.COM</b>
+                      </div>
+                      <div class="site-footer__social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                   <div class="footer-widget__column footer-widget__contact clearfix">
+                      <h3 class="footer-widget__title">Thông tin liên hệ</h3>
+                      <ul class="footer-widget__contact-list list-unstyled clearfix">
+                            <li>
+                               <div class="icon">
+                                  <i class="fas fa-envelope-open-text" style="color: white; font-size: 20px;"></i>
+                               </div>
+                               <div class="text">
+                                  <p><a href="mailto:vietha@company.com">Mail: vietha@company.com</a></p>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="icon">
+                                     <i class="fas fa-map-marker-alt" style="color: white; font-size: 20px;"></i>
+                               </div>
+                               <div class="text">
+                                  <p>Chung cư Đạt Gia, Đường cây Keo, P. Tam Phú, Thành Phố Thủ Đức</p>
+                               </div>
+                            </li>
+                      </ul>
+                      <div class="footer-widget__open-hour">
+                            <h3 class="footer-widget__open-hour-title">Giờ mở cửa</h3>
+                            <h3 class="footer-widget__open-hour-text">Thứ Hai – Thứ 7: 8:00 am đến 6:00 pm Sunday:
+                               Đóng cửa</h3>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                   <div class="footer-widget__column footer-widget__gallery clearfix">
+                      <h3 class="footer-widget__title">Instagram</h3>
+                      <ul class="footer-widget__gallery-list list-unstyled clearfix">
+                            <li>
+                               <div class="footer-widget__gallery-img">
+                                  <img src="../IMG/footer-widget-gallery-img-1.jpg" alt="">
+                                  <a href="#"><span class="fa fa-link"></span></a>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="footer-widget__gallery-img">
+                                  <img src="../IMG/footer-widget-gallery-img-2.jpg" alt="">
+                                  <a href="#"><span class="fa fa-link"></span></a>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="footer-widget__gallery-img">
+                                  <img src="../IMG/footer-widget-gallery-img-3.jpg" alt="">
+                                  <a href="#"><span class="fa fa-link"></span></a>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="footer-widget__gallery-img">
+                                  <img src="../IMG/footer-widget-gallery-img-4.jpg" alt="">
+                                  <a href="#"><span class="fa fa-link"></span></a>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="footer-widget__gallery-img">
+                                  <img src="../IMG/footer-widget-gallery-img-5.jpg" alt="">
+                                  <a href="#"><span class="fa fa-link"></span></a>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="footer-widget__gallery-img">
+                                  <img src="../IMG/footer-widget-gallery-img-6.jpg" alt="">
+                                  <a href="#"><span class="fa fa-link"></span></a>
+                               </div>
+                            </li>
+                      </ul>
+                   </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                   <div class="footer-widget__column footer-widget__newsletter">
+                      <h3 class="footer-widget__title">Nhận tin mới</h3>
+                      <p class="footer-widget__newsletter-text">Đăng ký bản tin của chúng tôi để nhận được
+                         cập nhật & tin tức mới nhất.</p>
+                      <form class="footer-widget__newsletter-form">
+                            <div class="footer-widget__newsletter-input-box">
+                               <input type="email" placeholder="Email address" name="email">
+                               <button type="submit" class="footer-widget__newsletter-btn"><i
+                                        class="far fa-paper-plane"></i></button>
+                            </div>
+                      </form>
+                      <div class="footer-widget__phone">
+                            <div class="footer-widget__phone-icon">
+                               <i class="fas fa-blender-phone"></i>
+                            </div>
+                            <div class="footer-widget__phone-text">
+                               <a href="tel:+201146198234">+201146198234</a>
+                               <p>Liên hệ tư vấn</p>
+                            </div>
+                      </div>
+                   </div>
+                </div>
+          </div>
+       </div>
+       <div class="site-footer__bottom">
+          <div class="row">
+                <div class="col-xl-12">
+                   <div class="site-footer__bottom-inner rounded mb-3">
+                      <p class="site-footer__bottom-text">© All Copyright 2022 by <a href="../HTML/home.html">VIETHA COMPANY</a>
+                      </p>
+                   </div>
+                </div>
+          </div>
+       </div>
+    </div>
+</footer>
+<!--Site Footer End-->
+  
+</body>
+
+</html>
