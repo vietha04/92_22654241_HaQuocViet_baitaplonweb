@@ -1009,7 +1009,7 @@ danh muc
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
-  opacity: 0;
+  opacity: 0.1;
   z-index: -1;
 }
 .benefits__point-box {
