@@ -140,7 +140,20 @@
             margin: 10px 0;
         }
 
-        
+        #cart-notification {
+            width: 100%;
+            position: fixed;
+            top: 70px;
+            right: 0px;
+            padding: 10px 20px;
+            background-color: #ffcc33;
+            color: white;
+            z-index: 1000;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -327,17 +340,20 @@
         </div>
     </section>
     <!--Product Details Start-->
-    <section class="product-details">
+    <section class="product-details product__all-single" data-id="1">
         <div class="container">
             <div class="row">
+                <div id="cart-notification" class="alert alert-success" style="display:none;">
+                    Sản phẩm đã được thêm vào giỏ hàng!
+                </div>
                 <div class="col-lg-6 col-xl-6">
                     <div class="product-details__img wow animated fadeInLeft" data-wow-delay="100ms">
-                        <img src="../IMG/shop/switch-cisco-c1000fe-48p-4g-l.webp" alt="" />
+                        <img src="../IMG/shop/switch-cisco-c1000fe-48p-4g-l.webp" alt="" class="product-img" />
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-6">
                     <div class="product-details__top">
-                        <h3 class="product-details__title wow fadeInUpBig animated">Cisco C1000FE-48P-4G-L </h3>
+                        <h3 class="product-details__title product__all-title wow fadeInUpBig animated">Cisco C1000FE-48P-4G-L </h3>
                             <p class="product__all-price wow fadeInUpBig animated" data-wow-delay="100ms"><span style="color: black;font-weight: normal;">Giá bán:</span> 27,820,000 đ </p>
                             
                     </div>
@@ -426,7 +442,7 @@
 
                     <div class="product-details__buttons">
                         <div class="product-details__buttons-1">
-                            <a href="cart.html" class="thm-btn"> <i class="fa-solid fa-shopping-cart"></i> Thêm vào giỏ</a>
+                            <a href="#" class="thm-btn product__all-btn"> <i class="fa-solid fa-shopping-cart"></i> Thêm vào giỏ</a>
                             
                         </div>
                         <div class="product-details__buttons-2">

@@ -102,7 +102,7 @@
             const productElement = $(this).closest('.product__all-single');
             const product = {
                 id: productElement.data('id'),
-                name: productElement.find('.product__all-title a').text(),
+                name: productElement.find('.product__all-title').text(),
                 price: productElement.find('.product__all-price').text(),
                 image: productElement.find('.product-img').attr('src'),
                 quantity: 1
