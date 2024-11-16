@@ -976,6 +976,122 @@ danh muc
 .feature-three__single:hover .feature-three__title {
   color: white;
 }
+.benefits {
+  position: relative;
+  display: block;
+  background-color: #f2f5f9;
+  color: white;
+  padding: 120px 0 110px;
+  z-index: 1;
+  background: linear-gradient(-45deg, #004b4c, #097577, #5ff5f5, #39c500);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border-radius: 90px 0;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+.benefits-bg-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+  opacity: 0;
+  z-index: -1;
+}
+.benefits__point-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-top: 41px;
+}
+.benefits__point {
+  position: relative;
+  display: block;
+  float: left;
+}
+.benefits__point li {
+  height: 150px;
+  width: 630px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 10px;
+  transition: all 500ms ease;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.benefits__point li:hover {
+  background-color: #03b5b8;
+}
+
+.benefits__point li .icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  background-color: #03b5b8;
+  border-radius: 50%;
+  color: white;
+  font-size: 8px;
+  transition: all 500ms ease;
+}
+
+.benefits__point li:hover .icon {
+  background-color: black;
+  color: white;
+}
+.benefits__point li .text {
+  margin-left: 10px;
+}
+.benefits__point li .text p {
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  transition: all 500ms ease;
+  margin-bottom: 0;
+}
+
+.benefits__point li:hover .text p {
+  color: white;
+}
+@media only screen and (max-width: 767px) {
+  .benefits__point-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .benefits__point li{
+    width: 100%;
+    height: 170px;
+  }
+  .benefits__point li .text p {
+    font-size: 14px;
+  }
+}
 /* about */
 .about-three {
   position: relative;
@@ -1274,7 +1390,23 @@ danh muc
   transition-delay: 0.4s;
   transition-timing-function: linear;
 }
-
+@media only screen and (max-width: 767px){
+  .about-three__left {
+    margin: 0;
+  }
+  .about-three__location {
+    position: absolute;
+    bottom: 350px;
+    left: -6px;
+  }
+  .section-title{
+    text-align: center;
+    margin: 0px!important;
+  }
+  .section-sub-title-box{
+    margin: 0px;
+  }
+}
 /*--------------------------------------------------------------
 # Services Three
 --------------------------------------------------------------*/
@@ -1731,7 +1863,7 @@ danh muc
   top: 0;
   right: 0;
   bottom: 0;
-  width: 1221px;
+  width: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2042,10 +2174,6 @@ danh muc
 
 .team-one .container {
   max-width: 1070px;
-}
-
-.team-one .row {
-  --bs-gutter-x: 108px;
 }
 
 .team-one .section-title {
@@ -2394,6 +2522,58 @@ danh muc
   font-size: 24px;
   color: #c2dfff;
   line-height: 34px;
+}
+@media only screen and (max-width: 767px) {
+  .about-four__right {
+    margin: 0;
+    margin-top: 150px;
+  }
+  .cta-one__inner{
+    display: flex;
+    flex-direction: column!important;
+    padding: 39px 20px 51px;
+
+  }
+  .cta-one__title{
+    font-size: 25px !important;
+    text-align: center;
+  }
+  .section-title__title{
+    font-size: 25px !important;
+    text-align: center;
+    line-height: 1.4em;
+  }
+  .brand-one__title {
+    margin: 0!important;
+    text-align: center !important;
+  }
+  .about-four__text-1, .about-four__text-2{
+    font-size: 16px !important;
+  }
+  .about-four__right .section-title{
+    margin: 0px !important;
+  }
+  .about-four__img-two > img{
+    width: 90%!important;
+  }
+  .cta-one__right{
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .cta-one__btn-box{
+    margin: 0px !important;
+  }
+  .counter-one__single {
+    margin-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .page-header-bg{
+    width: 100%;
+  }
 }
 /*--------------------------------------------------------------
 # Contact Page
@@ -3414,12 +3594,16 @@ danh muc
   text-align: center;
   color: #03b5b8;
   font-size: 15px;
-  border-radius: 17px;
+  border-radius: 50%;
   border: 2px solid #03b5b8;
   overflow: hidden;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   z-index: 1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .product-details__social-link a + a {
