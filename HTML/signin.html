@@ -397,22 +397,19 @@
         </div>
       </div>
   
-    </div>
-
-  
+    </div> 
     <script>
       const registerButton = document.getElementById("register");
       const loginButton = document.getElementById("login");
       const container = document.getElementById("container");
-
+  
       registerButton.addEventListener("click", () => {
           container.classList.add("right-panel-active");
       });
-
+  
       loginButton.addEventListener("click", () => {
           container.classList.remove("right-panel-active");
       });
-
       function isEmailExist(email) {
           const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || [];
           return registeredUsers.some(user => user.email === email);
@@ -421,109 +418,112 @@
           const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           return regex.test(email);
       }
-
       function isValidName(name) {
-          const regex = /^[A-Z][a-z]+(\s+[A-Z][a-z]+)+$/;
+          const regex = /^[A-Z][a-z]+(\s+[A-Z][a-z]+)+$/; 
           return regex.test(name);
       }
-
+      function isValidPassword(password) {
+          const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; 
+          return regex.test(password);
+      }
       // Xử lý lưu thông tin đăng ký vào LocalStorage
       document.getElementById("registerForm").addEventListener("submit", function(event) {
-          event.preventDefault(); 
-
+          event.preventDefault();
+  
           const name = document.getElementById("registerName").value.trim();
           const email = document.getElementById("registerEmail").value.trim();
           const password = document.getElementById("registerPassword").value.trim();
-
-          // Kiểm tra nhập tên
           if (!name) {
               alert("Vui lòng nhập tên!");
               return;
           }
-
+  
           if (!isValidName(name)) {
               alert("Tên chỉ được chứa chữ cái và khoảng trắng, mỗi từ phải viết hoa!");
               return;
           }
-
-          // Kiểm tra nhập email
           if (!email) {
               alert("Vui lòng nhập email!");
               return;
           }
-
+  
           if (!isValidEmail(email)) {
               alert("Email không hợp lệ!");
               return;
           }
-
-          // Kiểm tra mật khẩu
           if (!password) {
               alert("Vui lòng nhập mật khẩu!");
               return;
           }
-
-          // Kiểm tra xem email đã tồn tại chưa
+  
+          if (!isValidPassword(password)) {
+              alert("Mật khẩu phải có tối thiểu 8 ký tự, bao gồm ít nhất một chữ cái và một số!");
+              return;
+          }
           if (isEmailExist(email)) {
               alert("Email đã tồn tại! Vui lòng sử dụng một email khác.");
               return;
           }
-
-
           const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || [];
           registeredUsers.push({ name, email, password });
           localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
-
+  
           alert("Đăng ký thành công!");
-
+  
+          // Lưu thông tin tài khoản tạm thời vào localStorage để tự động điền vào form đăng nhập
           localStorage.setItem("tempUser", JSON.stringify({ email, password }));
-
+  
+          // Chuyển sang giao diện đăng nhập ngay sau khi đăng ký
           container.classList.remove("right-panel-active");
-
+  
+          // Tự động điền thông tin vào form đăng nhập
           const tempUser = JSON.parse(localStorage.getItem("tempUser"));
           if (tempUser) {
               document.getElementById("loginEmail").value = tempUser.email;
               document.getElementById("loginPassword").value = tempUser.password;
           }
       });
+  
+      // Xử lý đăng nhập, lấy dữ liệu từ LocalStorage
       document.getElementById("loginForm").addEventListener("submit", function(event) {
-          event.preventDefault(); 
-
+          event.preventDefault(); // Ngăn việc form submit mặc định
+  
           const email = document.getElementById("loginEmail").value.trim();
           const password = document.getElementById("loginPassword").value.trim();
-
+  
           // Kiểm tra nhập email
           if (!email) {
               alert("Vui lòng nhập email!");
               return;
           }
-
+  
           if (!isValidEmail(email)) {
               alert("Email không hợp lệ!");
               return;
           }
-
+  
           // Kiểm tra nhập mật khẩu
           if (!password) {
               alert("Vui lòng nhập mật khẩu!");
               return;
           }
-
+  
           // Lấy dữ liệu từ LocalStorage
           const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers")) || [];
           const user = registeredUsers.find(user => user.email === email && user.password === password);
-
+  
           // Kiểm tra thông tin đăng nhập
           if (user) {
               alert("Đăng nhập thành công!");
-
+  
               // Chuyển hướng đến trang home.html
               window.location.href = "home.html";
           } else {
               alert("Email hoặc mật khẩu không chính xác.");
           }
       });
-    </script>
+  </script>
+  
 
 </body>
 </html>
